@@ -1,0 +1,103 @@
+body {
+    font-family: arial;
+    margin: 0;
+    height: 100vh;
+}
+ 
+.content {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+ 
+.content img {
+    width: 100%;
+}
+ 
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: #1b405a;
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform 0.5s linear;
+}
+ 
+.circle.show {
+    transform: rotate(-70deg);
+}
+ 
+.circle button {
+    background-color: transparent;
+    border: 0;
+    color: #829ba7;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height:100px;
+}
+ 
+.circle button.open {
+    left: 60%;
+}
+ 
+.circle button.close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: left top;
+}
+ 
+.wrapper {
+    transition: transform 0.5s linear;
+    transform-origin: top left;
+    background-color: #fff;
+}
+ 
+.wrapper.show {
+    transform: rotate(-20deg);
+}
+ 
+nav {
+    position: fixed;
+    left: -200px;
+    bottom: 50px;
+}
+ 
+nav ul {
+    list-style-type: none;
+}
+ 
+nav ul li {
+    font-size: 27px;
+    margin: 25px 5px;
+    color: #1b405a;
+    transition: transform 0.5s ease;
+    transition-delay: 0.1s;
+}
+ 
+nav ul li i {
+    margin-right: 10px;
+}
+ 
+.second {
+    transition-delay: 0.2s;
+}
+ 
+.third {
+    transition-delay: 0.3s;
+}
+ 
+nav.show .first {
+    transform: translateX(200px);
+}
+ 
+nav.show .second {
+    transform: translateX(220px);
+}
+ 
+nav.show .third {
+    transform: translateX(230px);
+}
